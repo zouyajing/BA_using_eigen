@@ -14,7 +14,7 @@ BA_ceres.cpp中实现了基于数值求导的BA，pose用李代数表示。
 
 基于Eigen的BA稍微复杂一些，主要多了两步：1. 非线性优化方法； 2. 矩阵求解。
 
-第一步实现了一个简单的GN方法，第二步用Eigen自带的ldlt求解（一般求解方法如LRU，LDLT，LLT，QR，SVD）。
+第一步实现了一个简单的GN方法，第二步用Eigen自带的ldlt求解（一般求解方法如LU，LDLT，LLT，QR，SVD）。
 
 由于观测量较少，需要将points固定，不然更新量被point分摊了（直接将point对应的雅可比赋值为0）。
 
